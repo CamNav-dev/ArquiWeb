@@ -1,0 +1,19 @@
+server:
+  port: 8081
+zuul:
+  routes:
+  #nombre del segmento
+    
+    genero:
+    #prefijo para ingresar a un servicio
+      path: /micro-genero/** 
+      url: http://localhost:8086/
+        
+    ciudad:
+    #prefijo para ingresar a un servicio
+      path: /micro-ciudad/** 
+      url: http://localhost:8085/
+    vehiculo:
+    #prefijo para ingresar a un servicio
+      path: /micro-vehiculo/** 
+      url: http://localhost:8084/ 
